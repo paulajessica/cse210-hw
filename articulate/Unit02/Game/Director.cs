@@ -4,6 +4,17 @@ using System.Collections.Generic;
 
 namespace Unit02.Game
 {
+    class Program
+    {
+        static int Main(string[] args)
+        {
+            Director director = new Director();
+            director.StartGame();
+            return 0;
+        }
+
+    }
+
     /// <summary>
     /// A person who directs the game. 
     ///
@@ -33,11 +44,14 @@ namespace Unit02.Game
         /// </summary>
         public void StartGame()
         {
+
+
             while (_isPlaying)
             {
                 GetInputs();
                 DoUpdates();
                 DoOutputs();
+
             }
         }
 
@@ -65,7 +79,7 @@ namespace Unit02.Game
             foreach (Die die in _dice)
             {
                 die.Roll();
-                _score += die.points;
+                _score += die._points;
             }
             _totalScore += _score;
         }
@@ -81,9 +95,10 @@ namespace Unit02.Game
             }
 
             string values = "";
+
             foreach (Die die in _dice)
             {
-                values += $"{die.value} ";
+                values += $"{die._value} ";
             }
 
             Console.WriteLine($"You rolled: {values}");
