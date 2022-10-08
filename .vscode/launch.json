@@ -195,7 +195,8 @@
             "stopAtEntry": false
         },
         {
-            "name": "Developer - Unit01 (Hil)",
+
+            "name": "Developer - Unit01 (Tic Tac Toe)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-developer-unit01",
