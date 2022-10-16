@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Unit03.Game 
+namespace Unit03.Game
 {
     /// <summary>
     /// <para>The person hiding from the Seeker.</para>
@@ -35,6 +35,7 @@ namespace Unit03.Game
         {
             int current = _distance[_distance.Count - 1];
             int previous = _distance[_distance.Count - 2];
+
 
             string hint = "(-.-) Nap time.";
             if (current == 0)
@@ -70,6 +71,7 @@ namespace Unit03.Game
         {
             int newDistance = Math.Abs(_location - seeker.GetLocation());
             _distance.Add(newDistance);
+
         }
     }
 }

@@ -37,6 +37,7 @@ namespace Unit03.Game
         /// <param name="location">The given location.</param>
         public void MoveLocation(int location)
         {
+
             this._location = location;
         }
 
