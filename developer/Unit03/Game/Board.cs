@@ -3,6 +3,13 @@ using System;
 namespace Unit03.Game
 {
 
+    /// <summary>   
+    /// The responsibility of class Board is to display parachute according of attempts.
+    /// </summary>
+
+    /// <summary>
+    /// Constructs a new instance of Board.
+    /// </summary>
     public class Board
     {
         private int _value;
@@ -13,6 +20,9 @@ namespace Unit03.Game
 
         }
 
+        /// <summary>
+        /// Keeps a track and display man parachute.
+        /// </summary>
         public void PrintMan(int _value)
         {
             if (_value == 0)
