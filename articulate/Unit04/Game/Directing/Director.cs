@@ -49,9 +49,9 @@ namespace Unit04.Game.Directing
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor robot = cast.GetFirstActor("robot");
-            Point velocity = _keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            Actor robot = cast.GetFirstActor("robot");// robot group
+            Point velocity = _keyboardService.GetDirection(); // return direction
+            robot.SetVelocity(velocity); //set value to velocity     
         }
 
         /// <summary>
@@ -73,11 +73,11 @@ namespace Unit04.Game.Directing
             {
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
+                    Artifact artifact = (Artifact)actor;
                     string message = artifact.GetMessage();
                     banner.SetText(message);
                 }
-            } 
+            }
         }
 
         /// <summary>

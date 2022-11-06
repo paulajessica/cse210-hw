@@ -51,7 +51,7 @@ namespace Unit04.Game.Directing
         {
             Actor robot = cast.GetFirstActor("robot");
             Point velocity = _keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            robot.SetVelocity(velocity);
         }
 
         /// <summary>
@@ -73,11 +73,11 @@ namespace Unit04.Game.Directing
             {
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
+                    Artifact artifact = (Artifact)actor;
                     string message = artifact.GetMessage();
                     banner.SetText(message);
                 }
-            } 
+            }
         }
 
         /// <summary>
